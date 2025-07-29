@@ -57,5 +57,7 @@ Distribuită liber, fără garanții.
 
 ## Download
 
+is on release .exe file
+
 
 
