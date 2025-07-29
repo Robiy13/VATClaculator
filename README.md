@@ -55,7 +55,7 @@ Distribuită liber, fără garanții.
 
 ---
 
-## Contact
+## Download
 
-Pentru întrebări sau sugestii, te rog contactează dezvoltatorul.
+
 
