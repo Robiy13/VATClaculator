@@ -54,7 +54,12 @@ Această aplicație este creată pentru oricine are nevoie rapidă de un calcula
 Distribuită liber, fără garanții.
 
 ---
+## ScreenShots
+<img width="189" height="317" alt="image" src="https://github.com/user-attachments/assets/b8750087-fc92-4c8a-bb37-638fff006699" />
 
+<img width="280" height="671" alt="image" src="https://github.com/user-attachments/assets/21be6364-7854-4915-b509-678cc4edbb0f" />
+
+---
 ## Download
 
 is on release .exe file
