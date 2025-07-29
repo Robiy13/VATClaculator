@@ -63,8 +63,21 @@ Distribuită liber, fără garanții.
 
 ---
 ## Download
+Fisierul este "Calculator.TVA.Setup.4.0.0.exe" la sectiunea de Assets
+<a href="https://github.com/Robiy13/VATClaculator/releases/tag/Calculator" target="_blank" style="
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+">
+  🚀 Go to Download
+</a>
 
-is on release .exe file
 
 
 
