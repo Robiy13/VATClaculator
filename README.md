@@ -10,13 +10,20 @@ Calculator TVA combină două funcții esențiale într-un singur program cu int
 ## Funcționalități principale
 
 ### Calculator de bază
-
+<div style="display: flex; gap: 10px;">
+ <img width="596" height="748" alt="Screenshot 2025-08-04 140018" src="https://github.com/user-attachments/assets/a76aa0e5-478e-4f9a-a4b9-2d81264e4714" />
+</div>
 - Introduci expresii matematice în caseta de calcul  
 - Apasă Enter pentru calcul  
 - Apasă Escape pentru ștergerea expresiei  
 - Poți folosi și tastatura, nu doar mouse-ul
 
 ### Calculator TVA
+
+<div style="display: flex; gap: 10px;">
+<img width="596" height="748" alt="Screenshot 2025-08-04 140217" src="https://github.com/user-attachments/assets/4764a3ec-95cd-4626-bd86-6df6c7d16cb7" />
+
+</div>
 
 - Introduci prețul fără TVA sau prețul cu TVA  
 - Specifici procentul TVA (ex: 19%)  
