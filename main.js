@@ -3,8 +3,8 @@ const path = require('path');
 
 function createWindow(){
   const win = new BrowserWindow({
-    width: 600,    // lățime potrivită pentru calculator + TVA
-    height: 750,   // înălțime potrivită (ajustează după conținut)
+    width: 580,    // lățime potrivită pentru calculator + TVA
+    height: 700,   // înălțime potrivită (ajustează după conținut)
     resizable: false,  // blochează redimensionarea
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'), // dacă-l folosești

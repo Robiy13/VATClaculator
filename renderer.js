@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const display = document.getElementById("calcDisplay");
   const buttons = document.querySelectorAll(".btn[data-value]");
@@ -30,10 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
     return ["+", "-", "*", "/"].includes(char);
   }
 
+  // Functie care extrage ultimul numar din expresie
+  function getLastNumber(expr) {
+    const parts = expr.split(/[\+\-\*\/]/);
+    return parts[parts.length - 1];
+  }
+
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const value = btn.dataset.value;
       const lastChar = expression.slice(-1);
+
+      if (value === ".") {
+        const lastNumber = getLastNumber(expression);
+        // Dacă ultimul număr are deja virgulă, nu adăuga altă virgulă
+        if (lastNumber.includes(".")) {
+          return;
+        }
+        // Dacă expresia e goală sau ultimul caracter este operator, adaugă "0."
+        if (expression === "" || isOperator(lastChar)) {
+          expression += "0.";
+          updateDisplay();
+          return;
+        }
+      }
+
       if (isOperator(value) && isOperator(lastChar)) {
         expression = expression.slice(0, -1) + value;
       } else {
@@ -75,30 +95,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const pretInput = document.getElementById("pretInput");
-  const procentTVA = document.getElementById("procentTVA");
-  const pretCuTVA = document.getElementById("pretCuTVA");
-  const pretFaraTVA = document.getElementById("pretFaraTVA");
-  const valoareTVA1 = document.getElementById("valoareTVA1");
-  const valoareTVA2 = document.getElementById("valoareTVA2");
+const pretInput = document.getElementById("pretInput");
+const procentTVA = document.getElementById("procentTVA");
+const pretCuTVA = document.getElementById("pretCuTVA");
+const pretFaraTVA = document.getElementById("pretFaraTVA");
+const valoareTVA1 = document.getElementById("valoareTVA1");
+const valoareTVA2 = document.getElementById("valoareTVA2");
 
-  function calculeazaTVA() {
-    const pret = parseFloat(pretInput.value);
-    const procent = parseFloat(procentTVA.value);
+function sanitizeValue(val) {
+  // Elimină tot ce nu e cifră sau punct
+  val = val.replace(/[^0-9.]/g, '');
+  // Permite un singur punct
+  const parts = val.split('.');
+  if (parts.length > 2) {
+    val = parts[0] + '.' + parts.slice(1).join('');
+  }
+  return val;
+}
 
-    if (isNaN(pret) || isNaN(procent)) return;
+function calculeazaTVA() {
+  // Curățare și setare valori pentru ambele inputuri
+  let valPret = sanitizeValue(pretInput.value);
+  if (valPret !== pretInput.value) pretInput.value = valPret;
 
-    const pretCu = pret + (pret * procent / 100);
-    const valoareTVA = pretCu - pret;
-    const pretFara = pret / (1 + procent / 100);
-    const valoareTVAdinCu = pret - pretFara;
+  let valProcent = sanitizeValue(procentTVA.value);
+  if (valProcent !== procentTVA.value) procentTVA.value = valProcent;
 
-    pretCuTVA.value = pretCu.toFixed(2);
-    valoareTVA1.value = valoareTVA.toFixed(2);
-    pretFaraTVA.value = pretFara.toFixed(2);
-    valoareTVA2.value = valoareTVAdinCu.toFixed(2);
+  if (valPret === '' || valProcent === '') {
+    pretCuTVA.value = '';
+    valoareTVA1.value = '';
+    pretFaraTVA.value = '';
+    valoareTVA2.value = '';
+    return;
   }
 
-  pretInput.addEventListener("input", calculeazaTVA);
-  procentTVA.addEventListener("input", calculeazaTVA);
+  const pret = parseFloat(valPret);
+  const procent = parseFloat(valProcent);
+
+  if (isNaN(pret) || isNaN(procent)) {
+    pretCuTVA.value = '';
+    valoareTVA1.value = '';
+    pretFaraTVA.value = '';
+    valoareTVA2.value = '';
+    return;
+  }
+
+  const pretCu = pret + (pret * procent / 100);
+  const valoareTVA = pretCu - pret;
+  const pretFara = pret / (1 + procent / 100);
+  const valoareTVAdinCu = pret - pretFara;
+
+  pretCuTVA.value = pretCu.toFixed(2);
+  valoareTVA1.value = valoareTVA.toFixed(2);
+  pretFaraTVA.value = pretFara.toFixed(2);
+  valoareTVA2.value = valoareTVAdinCu.toFixed(2);
+}
+
+pretInput.addEventListener("input", calculeazaTVA);
+procentTVA.addEventListener("input", calculeazaTVA);
+
+
 });

@@ -15,7 +15,7 @@
     </div>
 
     <div id="calculator">
-      <input type="text" id="calcDisplay" readonly />
+      <input type="text" pattern="[0-9+\-*/.]+" id="calcDisplay" readonly />
       <div class="calc-buttons">
         <button class="btn" data-value="7">7</button>
         <button class="btn" data-value="8">8</button>
@@ -45,9 +45,9 @@
     <div id="tvaCalculator" style="display: none;">
       <div class="tva-row">
         <label for="pretInput">PREȚ:</label>
-        <input type="text" id="pretInput"/>
+        <input type="text" id="pretInput" inputmode="decimal" />
         <label for="procentTVA">Procent TVA (%):</label>
-        <input type="text" id="procentTVA" value="21" />
+        <input type="number" id="procentTVA" value="21" />
       </div>
 
       <div class="tva-row">
