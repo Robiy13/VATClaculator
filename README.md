@@ -11,18 +11,19 @@ Calculator TVA combină două funcții esențiale într-un singur program cu int
 
 ### Calculator de bază
 <div style="display: flex; gap: 10px;">
- <img width="596" height="748" alt="Screenshot 2025-08-04 140018" src="https://github.com/user-attachments/assets/a76aa0e5-478e-4f9a-a4b9-2d81264e4714" />
+ <img width="613" height="764" alt="Screenshot 2025-08-04 145956" src="https://github.com/user-attachments/assets/b877af0a-dda0-41f2-ba5e-9beac93d11e6" />
 </div>
+
 - Introduci expresii matematice în caseta de calcul  
 - Apasă Enter pentru calcul  
 - Apasă Escape pentru ștergerea expresiei  
+- Apasă Delete pentru ștergerea complet  
 - Poți folosi și tastatura, nu doar mouse-ul
 
 ### Calculator TVA
 
 <div style="display: flex; gap: 10px;">
-<img width="596" height="748" alt="Screenshot 2025-08-04 140217" src="https://github.com/user-attachments/assets/4764a3ec-95cd-4626-bd86-6df6c7d16cb7" />
-
+<img width="618" height="517" alt="Screenshot 2025-08-04 150002" src="https://github.com/user-attachments/assets/f8aec29d-1fe6-489a-93b8-d726f51a5018" />
 </div>
 
 - Introduci prețul fără TVA sau prețul cu TVA  
@@ -71,7 +72,7 @@ Distribuită liber, fără garanții.
 ---
 ## Download
 Fisierul este "Calculator.TVA.Setup.4.0.0.exe" la sectiunea de Assets
-<a href="https://github.com/Robiy13/VATClaculator/releases/download/Calculator/Calculator.TVA.Setup.4.0.0.exe" target="_blank" style="
+<a href="https://github.com/Robiy13/VATClaculator/releases/download/Calculator/Calculator.TVA.Setup.5.3.0.exe" target="_blank" style="
   display: inline-block;
   padding: 12px 24px;
   background: linear-gradient(135deg, #4CAF50, #2E7D32);
