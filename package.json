@@ -1,0 +1,28 @@
+{
+  "name": "CalculatorTVA",
+  "version": "4.0.0",
+  "description": "Calculator de bază + TVA",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron",
+    "package-win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.calcultv.tva",
+    "productName": "Calculator TVA",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Calculator TVA"
+    }
+  }
+}

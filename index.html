@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator & TVA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="modeSwitch">
+      <button id="normalMode">Calculator</button>
+      <button id="tvaMode">TVA</button>
+    </div>
+
+    <div id="calculator">
+      <input type="text" id="calcDisplay" readonly />
+      <div class="calc-buttons">
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="/">/</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="*">*</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="-">-</button>
+
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+		<button class="btn" id="equal">=</button>
+        <button class="btn operator" data-value="+">+</button>
+         
+        <button class="btn" id="backspace">⌫</button>
+        <button class="btn" id="clear">C</button>  
+      </div>
+    </div>
+
+    <div id="tvaCalculator" style="display: none;">
+      <div class="tva-row">
+        <label for="pretInput">PREȚ:</label>
+        <input type="text" id="pretInput"/>
+        <label for="procentTVA">Procent TVA (%):</label>
+        <input type="text" id="procentTVA" value="21" />
+      </div>
+
+      <div class="tva-row">
+        <label>Preț cu TVA:</label>
+        <input type="text" id="pretCuTVA" readonly />
+        <label>Valoare TVA:</label>
+        <input type="text" id="valoareTVA1" readonly />
+      </div>
+
+      <div class="tva-row">
+        <label>Preț fără TVA:</label>
+        <input type="text" id="pretFaraTVA" readonly />
+        <label>Valoare TVA:</label>
+        <input type="text" id="valoareTVA2" readonly />
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
