@@ -26,7 +26,7 @@ Calculator TVA combină două funcții esențiale într-un singur program cu int
 </div>
 
 - Introduci prețul fără TVA sau prețul cu TVA  
-- Specifici procentul TVA (ex: 19%)  
+- Specifici procentul TVA (ex: 21%)  
 - Aplicația calculează automat valoarea TVA și prețul final  
 - Poți trece rapid între modul calculator și modul TVA cu tab-urile din interfață
 
